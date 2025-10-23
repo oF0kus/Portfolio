@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fernando_Scarabeli.dev</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio </a>
+            </li>
+
+            <li>
+                <a href="#sobre" class="menu-link">Sobre </a>
+            </li>
+
+            <li>
+                <a href="#projetos" class="menu-link">Projetos </a>
+            </li>
+
+            <li>
+                <a href="#contatos" class="menu-link">Contatos </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img src="./img/Fernando.jpg" alt="Foto de Fernando Scarabeli" class="foto-perfil">
+        <h1>Fernando Scarabeli</h1>
+        <p class="cabecalho-sub-titulo">Pior Dev do Mundo</p>
+
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-texto">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit iure expedita quaerat possimus commodi
+                animi? Distinctio ea iusto, sapiente tenetur consequuntur, aliquid, architecto dignissimos reiciendis
+                animi harum placeat rerum maiores.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="./img/Ferrari.avif" alt="Ferrari" class="projetos-imagem">
+                <div class="caixa-textos-proj">
+                    <h3 class="info-projetos">Ferrari</h3>
+                    <p class="texto-projetos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, quia
+                        praesentium odit repellendus eaque temporibus exercitationem laboriosam explicabo voluptatibus!
+                        Soluta maxime obcaecati sequi, aliquid id repudiandae eaque recusandae repellat similique?</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/Sauber.avif" alt="Sauber" class="projetos-imagem">
+                <div class="caixa-textos-proj">
+                    <h3 class="info-projetos">Sauber</h3>
+                    <p class="texto-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores
+                        quidem, officiis adipisci deserunt consequuntur iure nihil dignissimos, odit neque recusandae
+                        deleniti. Perspiciatis pariatur quo mollitia, repellendus quam sit id?</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/Mercedes.avif" alt="Mercedes" class="projetos-imagem">
+                <div class="caixa-textos-proj">
+                    <h3 class="info-projetos">Mercedes</h3>
+                    <p class="texto-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+                        temporibus totam voluptatem sed ullam fuga voluptas eligendi doloribus dolores impedit omnis
+                        itaque
+                        facere, commodi, sapiente porro sequi repellendus, accusamus at!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo"> Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form"> Enviar Whatsapp</button>
+        </form>
+
+
+    </section>
+
+    <script>
+
+        function enviarWhats(event) {
+
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5531987856171'
+
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+
+    </script>
+</body>
+
+</html>
