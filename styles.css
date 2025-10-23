@@ -261,6 +261,27 @@ h1 {
 
 }
 
+.redes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.redes a {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.redes a:hover {
+    color:var(--primaria);
+    transform: scale(1.2);
+    transform: translateY(-5px) scale(1.2);
+    transition: all 0. ease;
+}
+
+
 @keyframes flutuar {
     0%, 100%{
         transform: translateY(0);
@@ -270,7 +291,7 @@ h1 {
     }
 }
 #mensagem {
-    resize: none;        /* impede o redimensionamento */
-    overflow: auto;      /* adiciona scroll se ultrapassar 4 linhas */
-    height: calc(1.5rem * 4 + 2rem); /* altura fixa para 4 linhas considerando padding */
+    resize: none;       
+    overflow: auto;     
+    height: calc(1.5rem * 4 + 2rem); 
 }
