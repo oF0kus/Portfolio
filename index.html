@@ -72,36 +72,47 @@
         <h2 class="projetos-titulo">Meus Projetos</h2>
 
         <div class="projetos-caixa">
-            <div class="projetos-card">
-                <img src="./img/Ferrari.avif" alt="Ferrari" class="projetos-imagem">
-                <div class="caixa-textos-proj">
-                    <h3 class="info-projetos">Ferrari</h3>
-                    <p class="texto-projetos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, quia
-                        praesentium odit repellendus eaque temporibus exercitationem laboriosam explicabo voluptatibus!
-                        Soluta maxime obcaecati sequi, aliquid id repudiandae eaque recusandae repellat similique?</p>
-                </div>
-            </div>
 
-            <div class="projetos-card">
-                <img src="./img/Sauber.avif" alt="Sauber" class="projetos-imagem">
-                <div class="caixa-textos-proj">
-                    <h3 class="info-projetos">Sauber</h3>
-                    <p class="texto-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores
-                        quidem, officiis adipisci deserunt consequuntur iure nihil dignissimos, odit neque recusandae
-                        deleniti. Perspiciatis pariatur quo mollitia, repellendus quam sit id?</p>
+            <a href="https://www.ferrari.com/en-EN/formula1" target="_blank" class="projetos-link">
+                <div class="projetos-card">
+                    <img src="./img/Ferrari.avif" alt="Ferrari" class="projetos-imagem">
+                    <div class="caixa-textos-proj">
+                        <h3 class="info-projetos">Ferrari</h3>
+                        <p class="texto-projetos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
+                            quia
+                            praesentium odit repellendus eaque temporibus exercitationem laboriosam explicabo
+                            voluptatibus!
+                            Soluta maxime obcaecati sequi, aliquid id repudiandae eaque recusandae repellat similique?
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="projetos-card">
-                <img src="./img/Mercedes.avif" alt="Mercedes" class="projetos-imagem">
-                <div class="caixa-textos-proj">
-                    <h3 class="info-projetos">Mercedes</h3>
-                    <p class="texto-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-                        temporibus totam voluptatem sed ullam fuga voluptas eligendi doloribus dolores impedit omnis
-                        itaque
-                        facere, commodi, sapiente porro sequi repellendus, accusamus at!</p>
+            <a href="https://www.sauber-group.com/" target="_blank" class="projetos-link">
+                <div class="projetos-card">
+                    <img src="./img/Sauber.avif" alt="Sauber" class="projetos-imagem">
+                    <div class="caixa-textos-proj">
+                        <h3 class="info-projetos">Sauber</h3>
+                        <p class="texto-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                            asperiores
+                            quidem, officiis adipisci deserunt consequuntur iure nihil dignissimos, odit neque
+                            recusandae
+                            deleniti. Perspiciatis pariatur quo mollitia, repellendus quam sit id?</p>
+                    </div>
                 </div>
-            </div>
+            </a>
+            <a href="https://www.mercedesamgf1.com/" target="_blank" class="projetos-link">
+                <div class="projetos-card">
+                    <img src="./img/Mercedes.avif" alt="Mercedes" class="projetos-imagem">
+                    <div class="caixa-textos-proj">
+                        <h3 class="info-projetos">Mercedes</h3>
+                        <p class="texto-projetos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
+                            temporibus totam voluptatem sed ullam fuga voluptas eligendi doloribus dolores impedit omnis
+                            itaque
+                            facere, commodi, sapiente porro sequi repellendus, accusamus at!</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -122,7 +133,7 @@
     </section>
 
     <script>
-        
+
         function enviarWhats(event) {
 
             event.preventDefault()
@@ -142,26 +153,6 @@
             window.open(url, '_blank')
         }
 
-
-        function configurarLinksProjetos() {
-        const links = {
-            "Ferrari": "https://www.ferrari.com",
-            "Sauber": "https://www.sauber-group.com/motorsport/formula-1/",
-            "Mercedes": "https://www.mercedesamgf1.com"
-        }
-
-        document.querySelectorAll('.projetos-card').forEach(card => {
-            const titulo = card.querySelector('.info-projetos').textContent.trim()
-            const link = links[titulo]
-            if (link) {
-                card.addEventListener('click', () => window.open(link, '_blank'))
-            }
-        })
-    }
-
-    // chama a função depois que a página carregar
-    window.addEventListener('DOMContentLoaded', configurarLinksProjetos)
-</script>
 
     </script>
 </body>

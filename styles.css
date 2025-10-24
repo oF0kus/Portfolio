@@ -281,7 +281,11 @@ h1 {
     transition: all 0. ease;
 }
 
-
+.projetos-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* garante que o <a> envolva o card inteiro */
+}
 @keyframes flutuar {
     0%, 100%{
         transform: translateY(0);
